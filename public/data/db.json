@@ -1,0 +1,1705 @@
+{
+  "categories": {
+    "cars": [
+      {
+        "id": "car_001",
+        "title": "2022 Tesla Model 3 Long Range",
+        "description": "Dual motor, all-wheel drive, autopilot, 18'' aero wheels, like new condition",
+        "dateTime": "2026-06-01T10:30:00Z",
+        "category": "cars",
+        "featured": true,
+        "isUrgent": false,
+        "price": 45999,
+        "isNew": false,
+        "contact": {
+          "phone": "+11234567890",
+          "email": "tesla.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["car_0010.jpg", "car_0011.jpg"],
+        "specificData": {
+          "mileageKm": 15200,
+          "year": 2022,
+          "chassisCondition": "No accidents, clean title",
+          "bodyCondition": "Excellent, minor rock chips on front bumper",
+          "color": "White Metallic",
+          "transmission": "Automatic",
+          "fuelType": "Electric",
+          "engineCapacity": "N/A"
+        },
+        "city": "San Francisco",
+        "neighborhood": "SoMa"
+      },
+      {
+        "id": "car_002",
+        "title": "2023 Honda CR-V EX-L",
+        "description": "One owner, heated seats, sunroof, Apple CarPlay, perfect condition",
+        "dateTime": "2026-06-02T14:15:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": true,
+        "price": 32900,
+        "isNew": false,
+        "contact": {
+          "phone": "+19876543210",
+          "email": "honda.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["car_0021.jpg", "car_0022.jpg"],
+        "specificData": {
+          "mileageKm": 28500,
+          "year": 2023,
+          "chassisCondition": "Clean, no damage",
+          "bodyCondition": "Minor dent on rear bumper",
+          "color": "Platinum White Pearl",
+          "transmission": "CVT",
+          "fuelType": "Gasoline",
+          "engineCapacity": "1.5L Turbo"
+        },
+        "city": "Los Angeles",
+        "neighborhood": "San Fernando Valley"
+      },
+      {
+        "id": "car_003",
+        "title": "2021 BMW M4 Competition",
+        "description": "S58 engine, 503 hp, carbon fiber roof, laser lights, garage kept",
+        "dateTime": "2026-05-30T09:00:00Z",
+        "category": "cars",
+        "featured": true,
+        "isUrgent": false,
+        "price": 68900,
+        "isNew": false,
+        "contact": {
+          "phone": "+15551234567",
+          "email": "bmw.m4@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["car_003.jpg"],
+        "specificData": {
+          "mileageKm": 34200,
+          "year": 2021,
+          "chassisCondition": "Clean title, no accidents",
+          "bodyCondition": "Excellent, ceramic coated",
+          "color": "Brooklyn Grey Metallic",
+          "transmission": "Automatic",
+          "fuelType": "Gasoline",
+          "engineCapacity": "3.0L Twin-Turbo"
+        },
+        "city": "Miami",
+        "neighborhood": "Brickell"
+      },
+      {
+        "id": "car_004",
+        "title": "2024 Toyota RAV4 Hybrid XLE",
+        "description": "Brand new, 41 MPG, Toyota Safety Sense, panoramic sunroof",
+        "dateTime": "2026-06-03T18:45:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": true,
+        "price": 37500,
+        "isNew": true,
+        "contact": {
+          "phone": "+16667778888",
+          "email": "toyota.new@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["car_004.jpg"],
+        "specificData": {
+          "mileageKm": 50,
+          "year": 2024,
+          "chassisCondition": "Brand new",
+          "bodyCondition": "Flawless",
+          "color": "Magnetic Gray Metallic",
+          "transmission": "eCVT",
+          "fuelType": "Hybrid",
+          "engineCapacity": "2.5L"
+        },
+        "city": "Seattle",
+        "neighborhood": "Bellevue"
+      },
+      {
+        "id": "car_005",
+        "title": "2019 Ford Mustang GT Premium",
+        "description": "5.0L V8, 460 hp, manual transmission, performance pack",
+        "dateTime": "2026-05-28T11:20:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": false,
+        "price": 35900,
+        "isNew": false,
+        "contact": {
+          "phone": "+14445556666",
+          "email": "mustang.gt@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["car_005.jpg"],
+        "specificData": {
+          "mileageKm": 58700,
+          "year": 2019,
+          "chassisCondition": "Clean title",
+          "bodyCondition": "Good, some rock chips",
+          "color": "Race Red",
+          "transmission": "Manual",
+          "fuelType": "Gasoline",
+          "engineCapacity": "5.0L V8"
+        },
+        "city": "Austin",
+        "neighborhood": "Downtown"
+      },
+      {
+        "id": "car_006",
+        "title": "2020 Mercedes-Benz E 350",
+        "description": "Luxury package, leather seats, 64-color ambient lighting, smooth ride",
+        "dateTime": "2026-06-04T08:30:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": false,
+        "price": 42900,
+        "isNew": false,
+        "contact": {
+          "phone": "+17778889999",
+          "email": "benz.e350@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["car_006.jpg"],
+        "specificData": {
+          "mileageKm": 42300,
+          "year": 2020,
+          "chassisCondition": "No accidents",
+          "bodyCondition": "Excellent, garage kept",
+          "color": "Obsidian Black",
+          "transmission": "Automatic",
+          "fuelType": "Gasoline",
+          "engineCapacity": "2.0L Turbo"
+        },
+        "city": "New York",
+        "neighborhood": "Upper East Side"
+      },
+      {
+        "id": "car_007",
+        "title": "2018 Jeep Wrangler Unlimited Rubicon",
+        "description": "4x4, removable top, off-road ready, lifted with new tires",
+        "dateTime": "2026-05-29T16:00:00Z",
+        "category": "cars",
+        "featured": true,
+        "isUrgent": true,
+        "price": 38500,
+        "isNew": false,
+        "contact": {
+          "phone": "+19998887777",
+          "email": "jeep.rubi@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["car_007.jpg"],
+        "specificData": {
+          "mileageKm": 67100,
+          "year": 2018,
+          "chassisCondition": "Clean, minor undercarriage scratches",
+          "bodyCondition": "Good, trail pinstripes",
+          "color": "Sting-Gray",
+          "transmission": "Automatic",
+          "fuelType": "Gasoline",
+          "engineCapacity": "3.6L V6"
+        },
+        "city": "Denver",
+        "neighborhood": "Highlands"
+      },
+      {
+        "id": "car_008",
+        "title": "2025 Hyundai Ioniq 6 SE",
+        "description": "RWD, 361-mile range, ultra-fast charging, like new",
+        "dateTime": "2026-06-01T20:00:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": false,
+        "price": 43500,
+        "isNew": false,
+        "contact": {
+          "phone": "+12223334444",
+          "email": "ioniq6.seller@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["car_008.jpg"],
+        "specificData": {
+          "mileageKm": 8900,
+          "year": 2025,
+          "chassisCondition": "Perfect",
+          "bodyCondition": "Perfect",
+          "color": "Digital Green",
+          "transmission": "Automatic",
+          "fuelType": "Electric",
+          "engineCapacity": "N/A"
+        },
+        "city": "Portland",
+        "neighborhood": "Pearl District"
+      },
+      {
+        "id": "car_009",
+        "title": "2017 Audi Q7 3.0T Premium Plus",
+        "description": "Quattro, third row, Bose sound, Bang & Olufsen optional, well maintained",
+        "dateTime": "2026-06-05T12:00:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": false,
+        "price": 26900,
+        "isNew": false,
+        "contact": {
+          "phone": "+15556667777",
+          "email": "audi.q7@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["car_009.jpg"],
+        "specificData": {
+          "mileageKm": 92400,
+          "year": 2017,
+          "chassisCondition": "Clean title",
+          "bodyCondition": "Fair, some wear and tear",
+          "color": "Caribou Brown",
+          "transmission": "Automatic",
+          "fuelType": "Gasoline",
+          "engineCapacity": "3.0L Supercharged"
+        },
+        "city": "Chicago",
+        "neighborhood": "Lincoln Park"
+      },
+      {
+        "id": "car_010",
+        "title": "2023 Subaru Outback Wilderness",
+        "description": "Lifted, all-terrain tires, dual X-MODE, great for camping",
+        "dateTime": "2026-05-27T07:45:00Z",
+        "category": "cars",
+        "featured": true,
+        "isUrgent": false,
+        "price": 39800,
+        "isNew": false,
+        "contact": {
+          "phone": "+18889990000",
+          "email": "outback.wild@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["car_010.jpg"],
+        "specificData": {
+          "mileageKm": 21400,
+          "year": 2023,
+          "chassisCondition": "Excellent, no off-road damage",
+          "bodyCondition": "Minor scratches on skid plate",
+          "color": "Geyser Blue",
+          "transmission": "CVT",
+          "fuelType": "Gasoline",
+          "engineCapacity": "2.4L Turbo"
+        },
+        "city": "Salt Lake City",
+        "neighborhood": "Sugar House"
+      },
+      {
+        "id": "car_011",
+        "title": "2016 Porsche 911 Carrera S",
+        "description": "991.2, 3.0L twin-turbo, sport chrono, 20'' wheels, meticulously maintained",
+        "dateTime": "2026-06-06T09:15:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": false,
+        "price": 79900,
+        "isNew": false,
+        "contact": {
+          "phone": "+13334445555",
+          "email": "porsche.911@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["car_011.jpg"],
+        "specificData": {
+          "mileageKm": 47800,
+          "year": 2016,
+          "chassisCondition": "Clean title, no accidents",
+          "bodyCondition": "Excellent, paint protection film",
+          "color": "GT Silver Metallic",
+          "transmission": "PDK",
+          "fuelType": "Gasoline",
+          "engineCapacity": "3.0L Twin-Turbo"
+        },
+        "city": "Las Vegas",
+        "neighborhood": "Summerlin"
+      },
+      {
+        "id": "car_012",
+        "title": "2020 Kia Telluride SX",
+        "description": "V6, captain chairs, Harmon Kardon sound, tow package, family SUV",
+        "dateTime": "2026-06-07T16:30:00Z",
+        "category": "cars",
+        "featured": false,
+        "isUrgent": true,
+        "price": 35700,
+        "isNew": false,
+        "contact": {
+          "phone": "+16661112222",
+          "email": "telluride.sx@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["car_012.jpg"],
+        "specificData": {
+          "mileageKm": 56300,
+          "year": 2020,
+          "chassisCondition": "Clean title",
+          "bodyCondition": "Good, normal wear",
+          "color": "Dark Moss",
+          "transmission": "Automatic",
+          "fuelType": "Gasoline",
+          "engineCapacity": "3.8L V6"
+        },
+        "city": "Atlanta",
+        "neighborhood": "Buckhead"
+      }
+    ],
+    "mobile": [
+      {
+        "id": "mobile_001",
+        "title": "Samsung Galaxy S24 Ultra 512GB",
+        "description": "Titanium frame, S Pen, 200MP camera, 12GB RAM, like new in box",
+        "dateTime": "2026-06-01T10:00:00Z",
+        "category": "mobile",
+        "featured": true,
+        "isUrgent": false,
+        "price": 1199,
+        "isNew": false,
+        "contact": {
+          "phone": "+11223344556",
+          "email": "samsung.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": [""],
+        "specificData": {
+          "brand": "Samsung",
+          "storageGB": 512,
+          "ramGB": 12,
+          "color": "Titanium Gray",
+          "batteryHealth": "95%",
+          "warranty": "6 months left"
+        }
+      },
+      {
+        "id": "mobile_002",
+        "title": "iPhone 15 Pro Max 256GB",
+        "description": "A17 Pro chip, titanium design, 5x optical zoom, 1TB option available, mint condition",
+        "dateTime": "2026-06-02T09:30:00Z",
+        "category": "mobile",
+        "featured": true,
+        "isUrgent": true,
+        "price": 1099,
+        "isNew": false,
+        "contact": {
+          "phone": "+19876543210",
+          "email": "iphone.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Apple",
+          "storageGB": 256,
+          "ramGB": 8,
+          "color": "Natural Titanium",
+          "batteryHealth": "100%",
+          "warranty": "1 year AppleCare"
+        }
+      },
+      {
+        "id": "mobile_003",
+        "title": "Google Pixel 8 Pro 128GB",
+        "description": "Google AI, best camera, 7 years of updates, brand new sealed",
+        "dateTime": "2026-06-03T14:20:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": false,
+        "price": 799,
+        "isNew": true,
+        "contact": {
+          "phone": "+15432109876",
+          "email": "pixel.seller@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Google",
+          "storageGB": 128,
+          "ramGB": 12,
+          "color": "Bay Blue",
+          "batteryHealth": "100% (new)",
+          "warranty": "Full 2 years"
+        }
+      },
+      {
+        "id": "mobile_004",
+        "title": "OnePlus 12 256GB",
+        "description": "Snapdragon 8 Gen 3, 5400 mAh battery, 100W charging, fast and smooth",
+        "dateTime": "2026-06-04T11:15:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": false,
+        "price": 699,
+        "isNew": false,
+        "contact": {
+          "phone": "+16789012345",
+          "email": "oneplus.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": [""],
+        "specificData": {
+          "brand": "OnePlus",
+          "storageGB": 256,
+          "ramGB": 16,
+          "color": "Flowy Emerald",
+          "batteryHealth": "97%",
+          "warranty": "9 months left"
+        }
+      },
+      {
+        "id": "mobile_005",
+        "title": "Xiaomi 14 Ultra 512GB",
+        "description": "Leica quad camera, 1-inch sensor, 90W charging, ceramic back",
+        "dateTime": "2026-05-30T16:45:00Z",
+        "category": "mobile",
+        "featured": true,
+        "isUrgent": false,
+        "price": 1299,
+        "isNew": false,
+        "contact": {
+          "phone": "+14443332211",
+          "email": "xiaomi.ultra@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Xiaomi",
+          "storageGB": 512,
+          "ramGB": 16,
+          "color": "White Ceramic",
+          "batteryHealth": "99%",
+          "warranty": "1 year"
+        }
+      },
+      {
+        "id": "mobile_006",
+        "title": "Samsung Galaxy Z Fold 5 512GB",
+        "description": "Foldable 7.6'' display, S Pen support, multitasking beast",
+        "dateTime": "2026-06-05T08:00:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": true,
+        "price": 1499,
+        "isNew": false,
+        "contact": {
+          "phone": "+19998887766",
+          "email": "fold5.seller@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Samsung",
+          "storageGB": 512,
+          "ramGB": 12,
+          "color": "Icy Blue",
+          "batteryHealth": "94%",
+          "warranty": "8 months left"
+        }
+      },
+      {
+        "id": "mobile_007",
+        "title": "iPhone 14 128GB",
+        "description": "A15 Bionic, excellent condition, battery 92%, includes original box",
+        "dateTime": "2026-05-29T13:30:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": false,
+        "price": 599,
+        "isNew": false,
+        "contact": {
+          "phone": "+12224446688",
+          "email": "iphone14.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": [""],
+        "specificData": {
+          "brand": "Apple",
+          "storageGB": 128,
+          "ramGB": 6,
+          "color": "Midnight",
+          "batteryHealth": "92%",
+          "warranty": "Expired"
+        }
+      },
+      {
+        "id": "mobile_008",
+        "title": "Nothing Phone (2) 256GB",
+        "description": "Glyph interface, transparent design, clean OS, very unique",
+        "dateTime": "2026-06-06T19:00:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": false,
+        "price": 549,
+        "isNew": false,
+        "contact": {
+          "phone": "+13337779999",
+          "email": "nothing.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Nothing",
+          "storageGB": 256,
+          "ramGB": 12,
+          "color": "Dark Gray",
+          "batteryHealth": "98%",
+          "warranty": "1 year left"
+        }
+      },
+      {
+        "id": "mobile_009",
+        "title": "Google Pixel 7a 128GB",
+        "description": "Budget Pixel, same camera as flagship, great value, like new",
+        "dateTime": "2026-05-28T10:00:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": true,
+        "price": 349,
+        "isNew": false,
+        "contact": {
+          "phone": "+16668882222",
+          "email": "pixel7a@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Google",
+          "storageGB": 128,
+          "ramGB": 8,
+          "color": "Charcoal",
+          "batteryHealth": "96%",
+          "warranty": "6 months"
+        }
+      },
+      {
+        "id": "mobile_010",
+        "title": "Samsung Galaxy A54 256GB",
+        "description": "Great mid-range, 120Hz display, IP67, very clean",
+        "dateTime": "2026-06-07T12:00:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": false,
+        "price": 399,
+        "isNew": false,
+        "contact": {
+          "phone": "+17775554433",
+          "email": "a54.seller@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": [""],
+        "specificData": {
+          "brand": "Samsung",
+          "storageGB": 256,
+          "ramGB": 8,
+          "color": "Awesome Violet",
+          "batteryHealth": "95%",
+          "warranty": "4 months"
+        }
+      },
+      {
+        "id": "mobile_011",
+        "title": "iPhone 13 Pro Max 1TB",
+        "description": "Promotion display, Sierra Blue, battery 89%, excellent condition",
+        "dateTime": "2026-05-31T20:30:00Z",
+        "category": "mobile",
+        "featured": true,
+        "isUrgent": false,
+        "price": 749,
+        "isNew": false,
+        "contact": {
+          "phone": "+18884446666",
+          "email": "iphone13pm@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Apple",
+          "storageGB": 1024,
+          "ramGB": 6,
+          "color": "Sierra Blue",
+          "batteryHealth": "89%",
+          "warranty": "Expired"
+        }
+      },
+      {
+        "id": "mobile_012",
+        "title": "Asus ROG Phone 7 Ultimate 512GB",
+        "description": "Gaming phone, air triggers, AeroActive cooler, 165Hz AMOLED",
+        "dateTime": "2026-06-08T15:00:00Z",
+        "category": "mobile",
+        "featured": false,
+        "isUrgent": true,
+        "price": 999,
+        "isNew": true,
+        "contact": {
+          "phone": "+15551112233",
+          "email": "rog.phone@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": [""],
+        "specificData": {
+          "brand": "Asus",
+          "storageGB": 512,
+          "ramGB": 16,
+          "color": "Storm White",
+          "batteryHealth": "100% (new)",
+          "warranty": "2 years"
+        }
+      }
+    ],
+    "house": {
+      "forSale": [
+        {
+          "id": "house_forSale_001",
+          "title": "Modern 3-Bedroom Villa with Garden",
+          "description": "Spacious 3-bedroom villa, private garden, parking, great neighborhood",
+          "dateTime": "2026-06-01T11:00:00Z",
+          "category": "house",
+          "featured": true,
+          "isUrgent": false,
+          "price": 550000,
+          "isNew": true,
+          "contact": {
+            "phone": "+11234560000",
+            "email": "villa.seller@example.com"
+          },
+          "showPhone": true,
+          "showEmail": false,
+          "images": [""],
+          "specificData": {
+            "listingType": "forSale",
+            "areaSqm": 210,
+            "pricePerSqm": 2619,
+            "yearBuilt": 2023,
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "totalFloors": 2,
+            "floorNumber": 1,
+            "hasParking": true,
+            "hasElevator": false
+          }
+        },
+        {
+          "id": "house_forSale_002",
+          "title": "Downtown 2-Bedroom Condo",
+          "description": "Central location, modern finishes, city view, 24/7 security",
+          "dateTime": "2026-06-02T15:30:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": true,
+          "price": 320000,
+          "isNew": false,
+          "contact": {
+            "phone": "+19876541111",
+            "email": "condo.downtown@example.com"
+          },
+          "showPhone": true,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forSale",
+            "areaSqm": 95,
+            "pricePerSqm": 3368,
+            "yearBuilt": 2018,
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "totalFloors": 12,
+            "floorNumber": 7,
+            "hasParking": true,
+            "hasElevator": true
+          }
+        },
+        {
+          "id": "house_forSale_003",
+          "title": "Luxury 5-Bedroom Mansion",
+          "description": "Gated community, pool, home theater, guest house, premium finishes",
+          "dateTime": "2026-05-30T09:00:00Z",
+          "category": "house",
+          "featured": true,
+          "isUrgent": false,
+          "price": 1850000,
+          "isNew": true,
+          "contact": {
+            "phone": "+15552223333",
+            "email": "mansion.seller@example.com"
+          },
+          "showPhone": false,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forSale",
+            "areaSqm": 580,
+            "pricePerSqm": 3189,
+            "yearBuilt": 2025,
+            "bedrooms": 5,
+            "bathrooms": 6,
+            "totalFloors": 3,
+            "floorNumber": 1,
+            "hasParking": true,
+            "hasElevator": true
+          }
+        },
+        {
+          "id": "house_forSale_004",
+          "title": "Cozy 1-Bedroom Apartment",
+          "description": "Perfect for single or couple, renovated, close to metro",
+          "dateTime": "2026-06-03T10:45:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": false,
+          "price": 165000,
+          "isNew": false,
+          "contact": {
+            "phone": "+16667774444",
+            "email": "cozy.apt@example.com"
+          },
+          "showPhone": true,
+          "showEmail": false,
+          "images": [""],
+          "specificData": {
+            "listingType": "forSale",
+            "areaSqm": 52,
+            "pricePerSqm": 3173,
+            "yearBuilt": 1995,
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "totalFloors": 5,
+            "floorNumber": 3,
+            "hasParking": false,
+            "hasElevator": false
+          }
+        },
+        {
+          "id": "house_forSale_005",
+          "title": "Penthouse with Rooftop Terrace",
+          "description": "Top floor, 360 view, jacuzzi, smart home system",
+          "dateTime": "2026-05-28T14:00:00Z",
+          "category": "house",
+          "featured": true,
+          "isUrgent": false,
+          "price": 890000,
+          "isNew": false,
+          "contact": {
+            "phone": "+18889995555",
+            "email": "penthouse@example.com"
+          },
+          "showPhone": true,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forSale",
+            "areaSqm": 180,
+            "pricePerSqm": 4944,
+            "yearBuilt": 2021,
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "totalFloors": 15,
+            "floorNumber": 15,
+            "hasParking": true,
+            "hasElevator": true
+          }
+        },
+        {
+          "id": "house_forSale_006",
+          "title": "Traditional Townhouse",
+          "description": "Historic district, high ceilings, wooden floors, fireplace",
+          "dateTime": "2026-06-04T17:20:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": false,
+          "price": 450000,
+          "isNew": false,
+          "contact": {
+            "phone": "+14446667777",
+            "email": "townhouse@example.com"
+          },
+          "showPhone": false,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forSale",
+            "areaSqm": 145,
+            "pricePerSqm": 3103,
+            "yearBuilt": 1920,
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "totalFloors": 3,
+            "floorNumber": 1,
+            "hasParking": false,
+            "hasElevator": false
+          }
+        }
+      ],
+      "forRent": [
+        {
+          "id": "house_forRent_001",
+          "title": "Modern Studio Apartment for Rent",
+          "description": "Fully furnished, utilities included, close to university",
+          "dateTime": "2026-06-01T13:00:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": true,
+          "price": 1500,
+          "isNew": true,
+          "contact": {
+            "phone": "+11221113333",
+            "email": "rent.studio@example.com"
+          },
+          "showPhone": true,
+          "showEmail": false,
+          "images": [""],
+          "specificData": {
+            "listingType": "forRent",
+            "areaSqm": 45,
+            "monthlyRent": 1500,
+            "yearBuilt": 2022,
+            "bedrooms": 0,
+            "bathrooms": 1,
+            "totalFloors": 8,
+            "floorNumber": 4,
+            "hasParking": true,
+            "hasElevator": true
+          }
+        },
+        {
+          "id": "house_forRent_002",
+          "title": "Spacious 3-Bedroom Family Home",
+          "description": "Backyard, garage, pet friendly, good schools nearby",
+          "dateTime": "2026-06-02T18:00:00Z",
+          "category": "house",
+          "featured": true,
+          "isUrgent": false,
+          "price": 2800,
+          "isNew": false,
+          "contact": {
+            "phone": "+19871112222",
+            "email": "family.rent@example.com"
+          },
+          "showPhone": true,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forRent",
+            "areaSqm": 175,
+            "monthlyRent": 2800,
+            "yearBuilt": 2015,
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "totalFloors": 2,
+            "floorNumber": 1,
+            "hasParking": true,
+            "hasElevator": false
+          }
+        },
+        {
+          "id": "house_forRent_003",
+          "title": "Luxury 2-Bedroom High-Rise",
+          "description": "Concierge, gym, pool, amazing skyline view",
+          "dateTime": "2026-05-31T19:30:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": false,
+          "price": 3500,
+          "isNew": true,
+          "contact": {
+            "phone": "+15554446666",
+            "email": "luxury.rent@example.com"
+          },
+          "showPhone": false,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forRent",
+            "areaSqm": 110,
+            "monthlyRent": 3500,
+            "yearBuilt": 2024,
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "totalFloors": 30,
+            "floorNumber": 22,
+            "hasParking": true,
+            "hasElevator": true
+          }
+        },
+        {
+          "id": "house_forRent_004",
+          "title": "Affordable Room in Shared House",
+          "description": "All bills included, shared kitchen and living, quiet area",
+          "dateTime": "2026-06-05T10:00:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": true,
+          "price": 650,
+          "isNew": false,
+          "contact": {
+            "phone": "+17778889900",
+            "email": "shared.room@example.com"
+          },
+          "showPhone": true,
+          "showEmail": false,
+          "images": [""],
+          "specificData": {
+            "listingType": "forRent",
+            "areaSqm": 18,
+            "monthlyRent": 650,
+            "yearBuilt": 1980,
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "totalFloors": 2,
+            "floorNumber": 2,
+            "hasParking": false,
+            "hasElevator": false
+          }
+        },
+        {
+          "id": "house_forRent_005",
+          "title": "Beachfront 4-Bedroom Villa",
+          "description": "Private beach access, huge garden, staff quarters, amazing sunsets",
+          "dateTime": "2026-05-29T08:15:00Z",
+          "category": "house",
+          "featured": true,
+          "isUrgent": false,
+          "price": 7500,
+          "isNew": false,
+          "contact": {
+            "phone": "+19990001111",
+            "email": "beach.villa@example.com"
+          },
+          "showPhone": true,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forRent",
+            "areaSqm": 320,
+            "monthlyRent": 7500,
+            "yearBuilt": 2019,
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "totalFloors": 2,
+            "floorNumber": 1,
+            "hasParking": true,
+            "hasElevator": false
+          }
+        },
+        {
+          "id": "house_forRent_006",
+          "title": "Cozy 1-Bedroom Downtown Apartment",
+          "description": "Recently renovated, AC, walking distance to metro",
+          "dateTime": "2026-06-06T20:00:00Z",
+          "category": "house",
+          "featured": false,
+          "isUrgent": false,
+          "price": 1200,
+          "isNew": false,
+          "contact": {
+            "phone": "+16661113333",
+            "email": "downtown.rent@example.com"
+          },
+          "showPhone": false,
+          "showEmail": true,
+          "images": [""],
+          "specificData": {
+            "listingType": "forRent",
+            "areaSqm": 55,
+            "monthlyRent": 1200,
+            "yearBuilt": 2005,
+            "bedrooms": 1,
+            "bathrooms": 1,
+            "totalFloors": 6,
+            "floorNumber": 2,
+            "hasParking": false,
+            "hasElevator": false
+          }
+        }
+      ]
+    },
+    "clothes": [
+      {
+        "id": "clothes_001",
+        "title": "Men's Classic Leather Jacket",
+        "description": "Genuine leather, quilted lining, zip closure, timeless style",
+        "dateTime": "2026-06-01T12:00:00Z",
+        "category": "clothes",
+        "featured": true,
+        "isUrgent": true,
+        "price": 199,
+        "isNew": true,
+        "contact": {
+          "phone": "+11223334444",
+          "email": "leather.jacket@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["clothes_001.jpg", "clothes_0011.jpg"],
+        "specificData": {
+          "gender": "Male",
+          "ageGroup": "Adult",
+          "fabricMaterial": "100% Genuine Leather",
+          "size": "L",
+          "brand": "Schott NYC"
+        },
+        "city": "New York",
+        "neighborhood": "Williamsburg"
+      },
+      {
+        "id": "clothes_002",
+        "title": "Women's Summer Floral Dress",
+        "description": "Lightweight, breathable, perfect for hot days, pockets",
+        "dateTime": "2026-06-02T17:30:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": true,
+        "price": 45,
+        "isNew": true,
+        "contact": {
+          "phone": "+19877776666",
+          "email": "floral.dress@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["clothes_002.jpg"],
+        "specificData": {
+          "gender": "Female",
+          "ageGroup": "Adult",
+          "fabricMaterial": "Cotton + Linen",
+          "size": "M",
+          "brand": "Zara"
+        },
+        "city": "Los Angeles",
+        "neighborhood": "Venice Beach"
+      },
+      {
+        "id": "clothes_003",
+        "title": "Boy's Spider-Man Hoodie",
+        "description": "Super soft, official Marvel, full zip, hood with ears",
+        "dateTime": "2026-05-30T11:15:00Z",
+        "category": "clothes",
+        "featured": true,
+        "isUrgent": false,
+        "price": 29,
+        "isNew": false,
+        "contact": {
+          "phone": "+15554447777",
+          "email": "spiderman.hoodie@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["clothes_003.jpg"],
+        "specificData": {
+          "gender": "Boy",
+          "ageGroup": "Kids",
+          "fabricMaterial": "80% Cotton, 20% Polyester",
+          "size": "8 Years",
+          "brand": "Marvel"
+        },
+        "city": "Chicago",
+        "neighborhood": "Wicker Park"
+      },
+      {
+        "id": "clothes_004",
+        "title": "Girl's Princess Tutu Skirt",
+        "description": "Pink, sparkly, elastic waist, perfect for parties",
+        "dateTime": "2026-06-03T14:30:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": false,
+        "price": 19,
+        "isNew": true,
+        "contact": {
+          "phone": "+16668882222",
+          "email": "tutu.skirt@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["clothes_004.jpg"],
+        "specificData": {
+          "gender": "Girl",
+          "ageGroup": "Kids",
+          "fabricMaterial": "Nylon Tulle + Elastic",
+          "size": "5T",
+          "brand": "Disney"
+        },
+        "city": "Miami",
+        "neighborhood": "Coral Gables"
+      },
+      {
+        "id": "clothes_005",
+        "title": "Men's Slim Fit Jeans",
+        "description": "Stretch denim, dark wash, button fly, everyday wear",
+        "dateTime": "2026-05-28T09:45:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": false,
+        "price": 59,
+        "isNew": false,
+        "contact": {
+          "phone": "+14441115555",
+          "email": "jeans.men@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["clothes_005.jpg"],
+        "specificData": {
+          "gender": "Male",
+          "ageGroup": "Adult",
+          "fabricMaterial": "98% Cotton, 2% Elastane",
+          "size": "32x34",
+          "brand": "Levi's"
+        },
+        "city": "Austin",
+        "neighborhood": "South Congress"
+      },
+      {
+        "id": "clothes_006",
+        "title": "Women's Cashmere Sweater",
+        "description": "100% pure cashmere, turtleneck, elegant, very soft",
+        "dateTime": "2026-06-04T19:00:00Z",
+        "category": "clothes",
+        "featured": true,
+        "isUrgent": false,
+        "price": 149,
+        "isNew": true,
+        "contact": {
+          "phone": "+17779993333",
+          "email": "cashmere@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["clothes_006.jpg"],
+        "specificData": {
+          "gender": "Female",
+          "ageGroup": "Adult",
+          "fabricMaterial": "100% Cashmere",
+          "size": "S",
+          "brand": "Everlane"
+        },
+        "city": "New York",
+        "neighborhood": "SoHo"
+      },
+      {
+        "id": "clothes_007",
+        "title": "Baby Boy Onesie Set (3 Pack)",
+        "description": "Organic cotton, snap closure, cute animal prints",
+        "dateTime": "2026-06-05T08:30:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": true,
+        "price": 24,
+        "isNew": true,
+        "contact": {
+          "phone": "+18881113333",
+          "email": "baby.boy@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["clothes_007.jpg"],
+        "specificData": {
+          "gender": "Boy",
+          "ageGroup": "Baby",
+          "fabricMaterial": "100% Organic Cotton",
+          "size": "6-9 Months",
+          "brand": "Carter's"
+        },
+        "city": "Seattle",
+        "neighborhood": "Capitol Hill"
+      },
+      {
+        "id": "clothes_008",
+        "title": "Women's Running Leggings",
+        "description": "High waist, squat proof, side pockets, moisture wicking",
+        "dateTime": "2026-06-06T16:15:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": false,
+        "price": 65,
+        "isNew": false,
+        "contact": {
+          "phone": "+12223334444",
+          "email": "leggings@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["clothes_008.jpg"],
+        "specificData": {
+          "gender": "Female",
+          "ageGroup": "Adult",
+          "fabricMaterial": "78% Nylon, 22% Spandex",
+          "size": "M",
+          "brand": "Lululemon"
+        },
+        "city": "Los Angeles",
+        "neighborhood": "Santa Monica"
+      },
+      {
+        "id": "clothes_009",
+        "title": "Men's Hooded Puffer Jacket",
+        "description": "Water resistant, synthetic down, warm for winter",
+        "dateTime": "2026-05-27T13:00:00Z",
+        "category": "clothes",
+        "featured": true,
+        "isUrgent": false,
+        "price": 119,
+        "isNew": true,
+        "contact": {
+          "phone": "+19998884444",
+          "email": "puffer.jacket@example.com"
+        },
+        "showPhone": true,
+        "showEmail": false,
+        "images": ["clothes_009.jpg"],
+        "specificData": {
+          "gender": "Male",
+          "ageGroup": "Adult",
+          "fabricMaterial": "100% Nylon Shell, Polyester Fill",
+          "size": "XL",
+          "brand": "The North Face"
+        },
+        "city": "Denver",
+        "neighborhood": "LoHi"
+      },
+      {
+        "id": "clothes_010",
+        "title": "Girls Unicorn Pajama Set",
+        "description": "Long sleeves, soft cotton, glow in the dark print",
+        "dateTime": "2026-06-07T21:00:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": false,
+        "price": 22,
+        "isNew": true,
+        "contact": {
+          "phone": "+16665557777",
+          "email": "unicorn.pj@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["clothes_010.jpg", "clothes_0101.jpg"],
+        "specificData": {
+          "gender": "Girl",
+          "ageGroup": "Kids",
+          "fabricMaterial": "100% Cotton",
+          "size": "7 Years",
+          "brand": "Paw Patrol"
+        },
+        "city": "Portland",
+        "neighborhood": "Hawthorne"
+      },
+      {
+        "id": "clothes_011",
+        "title": "Men's Wool Overcoat",
+        "description": "Classic fit, peak lapel, wool blend, dress coat",
+        "dateTime": "2026-05-30T18:45:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": true,
+        "price": 249,
+        "isNew": false,
+        "contact": {
+          "phone": "+14448889999",
+          "email": "overcoat.men@example.com"
+        },
+        "showPhone": true,
+        "showEmail": true,
+        "images": ["clothes_011.jpg", "clothes_0111.jpg"],
+        "specificData": {
+          "gender": "Male",
+          "ageGroup": "Adult",
+          "fabricMaterial": "70% Wool, 30% Polyester",
+          "size": "40R",
+          "brand": "Calvin Klein"
+        },
+        "city": "Boston",
+        "neighborhood": "Back Bay"
+      },
+      {
+        "id": "clothes_012",
+        "title": "Women's Silk Blouse",
+        "description": "Charmeuse silk, elegant drape, button front, work or party",
+        "dateTime": "2026-06-08T11:30:00Z",
+        "category": "clothes",
+        "featured": false,
+        "isUrgent": false,
+        "price": 89,
+        "isNew": true,
+        "contact": {
+          "phone": "+17771112222",
+          "email": "silk.blouse@example.com"
+        },
+        "showPhone": false,
+        "showEmail": true,
+        "images": ["clothes_012.jpg"],
+        "specificData": {
+          "gender": "Female",
+          "ageGroup": "Adult",
+          "fabricMaterial": "100% Silk",
+          "size": "M",
+          "brand": "Equipment"
+        },
+        "city": "San Francisco",
+        "neighborhood": "Marina"
+      }
+    ]
+  },
+  "featured": [
+    {
+      "id": "car_001",
+      "title": "2022 Tesla Model 3 Long Range",
+      "description": "Dual motor, all-wheel drive, autopilot, 18'' aero wheels, like new condition",
+      "dateTime": "2026-06-01T10:30:00Z",
+      "category": "cars",
+      "featured": true,
+      "isUrgent": false,
+      "price": 45999,
+      "isNew": false,
+      "contact": {
+        "phone": "+11234567890",
+        "email": "tesla.seller@example.com"
+      },
+      "showPhone": true,
+      "showEmail": false,
+      "images": [""],
+      "specificData": {
+        "mileageKm": 15200,
+        "year": 2022,
+        "chassisCondition": "No accidents, clean title",
+        "bodyCondition": "Excellent, minor rock chips on front bumper",
+        "color": "Midnight Silver Metallic",
+        "transmission": "Automatic",
+        "fuelType": "Electric",
+        "engineCapacity": "N/A"
+      }
+    },
+    {
+      "id": "car_003",
+      "title": "2021 BMW M4 Competition",
+      "description": "S58 engine, 503 hp, carbon fiber roof, laser lights, garage kept",
+      "dateTime": "2026-05-30T09:00:00Z",
+      "category": "cars",
+      "featured": true,
+      "isUrgent": false,
+      "price": 68900,
+      "isNew": false,
+      "contact": {
+        "phone": "+15551234567",
+        "email": "bmw.m4@example.com"
+      },
+      "showPhone": true,
+      "showEmail": false,
+      "images": [""],
+      "specificData": {
+        "mileageKm": 34200,
+        "year": 2021,
+        "chassisCondition": "Clean title, no accidents",
+        "bodyCondition": "Excellent, ceramic coated",
+        "color": "Brooklyn Grey Metallic",
+        "transmission": "Automatic",
+        "fuelType": "Gasoline",
+        "engineCapacity": "3.0L Twin-Turbo"
+      }
+    },
+    {
+      "id": "car_007",
+      "title": "2018 Jeep Wrangler Unlimited Rubicon",
+      "description": "4x4, removable top, off-road ready, lifted with new tires",
+      "dateTime": "2026-05-29T16:00:00Z",
+      "category": "cars",
+      "featured": true,
+      "isUrgent": true,
+      "price": 38500,
+      "isNew": false,
+      "contact": {
+        "phone": "+19998887777",
+        "email": "jeep.rubi@example.com"
+      },
+      "showPhone": true,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "mileageKm": 67100,
+        "year": 2018,
+        "chassisCondition": "Clean, minor undercarriage scratches",
+        "bodyCondition": "Good, trail pinstripes",
+        "color": "Sting-Gray",
+        "transmission": "Automatic",
+        "fuelType": "Gasoline",
+        "engineCapacity": "3.6L V6"
+      }
+    },
+    {
+      "id": "car_010",
+      "title": "2023 Subaru Outback Wilderness",
+      "description": "Lifted, all-terrain tires, dual X-MODE, great for camping",
+      "dateTime": "2026-05-27T07:45:00Z",
+      "category": "cars",
+      "featured": true,
+      "isUrgent": false,
+      "price": 39800,
+      "isNew": false,
+      "contact": {
+        "phone": "+18889990000",
+        "email": "outback.wild@example.com"
+      },
+      "showPhone": true,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "mileageKm": 21400,
+        "year": 2023,
+        "chassisCondition": "Excellent, no off-road damage",
+        "bodyCondition": "Minor scratches on skid plate",
+        "color": "Geyser Blue",
+        "transmission": "CVT",
+        "fuelType": "Gasoline",
+        "engineCapacity": "2.4L Turbo"
+      }
+    },
+    {
+      "id": "mobile_001",
+      "title": "Samsung Galaxy S24 Ultra 512GB",
+      "description": "Titanium frame, S Pen, 200MP camera, 12GB RAM, like new in box",
+      "dateTime": "2026-06-01T10:00:00Z",
+      "category": "mobile",
+      "featured": true,
+      "isUrgent": false,
+      "price": 1199,
+      "isNew": false,
+      "contact": {
+        "phone": "+11223344556",
+        "email": "samsung.seller@example.com"
+      },
+      "showPhone": true,
+      "showEmail": false,
+      "images": [""],
+      "specificData": {
+        "brand": "Samsung",
+        "storageGB": 512,
+        "ramGB": 12,
+        "color": "Titanium Gray",
+        "batteryHealth": "95%",
+        "warranty": "6 months left"
+      }
+    },
+    {
+      "id": "mobile_002",
+      "title": "iPhone 15 Pro Max 256GB",
+      "description": "A17 Pro chip, titanium design, 5x optical zoom, 1TB option available, mint condition",
+      "dateTime": "2026-06-02T09:30:00Z",
+      "category": "mobile",
+      "featured": true,
+      "isUrgent": true,
+      "price": 1099,
+      "isNew": false,
+      "contact": {
+        "phone": "+19876543210",
+        "email": "iphone.seller@example.com"
+      },
+      "showPhone": true,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "brand": "Apple",
+        "storageGB": 256,
+        "ramGB": 8,
+        "color": "Natural Titanium",
+        "batteryHealth": "100%",
+        "warranty": "1 year AppleCare"
+      }
+    },
+    {
+      "id": "mobile_005",
+      "title": "Xiaomi 14 Ultra 512GB",
+      "description": "Leica quad camera, 1-inch sensor, 90W charging, ceramic back",
+      "dateTime": "2026-05-30T16:45:00Z",
+      "category": "mobile",
+      "featured": true,
+      "isUrgent": false,
+      "price": 1299,
+      "isNew": false,
+      "contact": {
+        "phone": "+14443332211",
+        "email": "xiaomi.ultra@example.com"
+      },
+      "showPhone": true,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "brand": "Xiaomi",
+        "storageGB": 512,
+        "ramGB": 16,
+        "color": "White Ceramic",
+        "batteryHealth": "99%",
+        "warranty": "1 year"
+      }
+    },
+    {
+      "id": "mobile_011",
+      "title": "iPhone 13 Pro Max 1TB",
+      "description": "Promotion display, Sierra Blue, battery 89%, excellent condition",
+      "dateTime": "2026-05-31T20:30:00Z",
+      "category": "mobile",
+      "featured": true,
+      "isUrgent": false,
+      "price": 749,
+      "isNew": false,
+      "contact": {
+        "phone": "+18884446666",
+        "email": "iphone13pm@example.com"
+      },
+      "showPhone": true,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "brand": "Apple",
+        "storageGB": 1024,
+        "ramGB": 6,
+        "color": "Sierra Blue",
+        "batteryHealth": "89%",
+        "warranty": "Expired"
+      }
+    },
+    {
+      "id": "house_forSale_001",
+      "title": "Modern 3-Bedroom Villa with Garden",
+      "description": "Spacious 3-bedroom villa, private garden, parking, great neighborhood",
+      "dateTime": "2026-06-01T11:00:00Z",
+      "category": "house",
+      "featured": true,
+      "isUrgent": false,
+      "price": 550000,
+      "isNew": true,
+      "contact": {
+        "phone": "+11234560000",
+        "email": "villa.seller@example.com"
+      },
+      "showPhone": true,
+      "showEmail": false,
+      "images": [""],
+      "specificData": {
+        "listingType": "forSale",
+        "areaSqm": 210,
+        "pricePerSqm": 2619,
+        "yearBuilt": 2023,
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "totalFloors": 2,
+        "floorNumber": 1,
+        "hasParking": true,
+        "hasElevator": false
+      }
+    },
+    {
+      "id": "house_forSale_003",
+      "title": "Luxury 5-Bedroom Mansion",
+      "description": "Gated community, pool, home theater, guest house, premium finishes",
+      "dateTime": "2026-05-30T09:00:00Z",
+      "category": "house",
+      "featured": true,
+      "isUrgent": false,
+      "price": 1850000,
+      "isNew": true,
+      "contact": {
+        "phone": "+15552223333",
+        "email": "mansion.seller@example.com"
+      },
+      "showPhone": false,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "listingType": "forSale",
+        "areaSqm": 580,
+        "pricePerSqm": 3189,
+        "yearBuilt": 2025,
+        "bedrooms": 5,
+        "bathrooms": 6,
+        "totalFloors": 3,
+        "floorNumber": 1,
+        "hasParking": true,
+        "hasElevator": true
+      }
+    },
+    {
+      "id": "house_forSale_005",
+      "title": "Penthouse with Rooftop Terrace",
+      "description": "Top floor, 360 view, jacuzzi, smart home system",
+      "dateTime": "2026-05-28T14:00:00Z",
+      "category": "house",
+      "featured": true,
+      "isUrgent": false,
+      "price": 890000,
+      "isNew": false,
+      "contact": {
+        "phone": "+18889995555",
+        "email": "penthouse@example.com"
+      },
+      "showPhone": true,
+      "showEmail": true,
+      "images": [""],
+      "specificData": {
+        "listingType": "forSale",
+        "areaSqm": 180,
+        "pricePerSqm": 4944,
+        "yearBuilt": 2021,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "totalFloors": 15,
+        "floorNumber": 15,
+        "hasParking": true,
+        "hasElevator": true
+      }
+    },
+    {
+      "id": "clothes_001",
+      "title": "Men's Classic Leather Jacket",
+      "description": "Genuine leather, quilted lining, zip closure, timeless style",
+      "dateTime": "2026-06-01T12:00:00Z",
+      "category": "clothes",
+      "featured": true,
+      "isUrgent": false,
+      "price": 199,
+      "isNew": true,
+      "contact": {
+        "phone": "+11223334444",
+        "email": "leather.jacket@example.com"
+      },
+      "showPhone": true,
+      "showEmail": false,
+      "images": [""],
+      "specificData": {
+        "gender": "Male",
+        "ageGroup": "Adult",
+        "fabricMaterial": "100% Genuine Leather",
+        "size": "L",
+        "brand": "Schott NYC"
+      }
+    }
+  ]
+}
