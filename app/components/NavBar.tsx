@@ -12,11 +12,11 @@ const NavBar = () => {
   return (
     <nav className="bg-pink-950 border-b border-red-700 shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center ">
-        <div className="flex items-center gap-4  justify-between">
+        <div className="flex items-center gap-4  justify-between w-full">
           <NavLink
             to="/"
             className={
-              "flex items-center gap-2 text-2xl font-bold text-red-100 hover:text-red-400 transition group"
+              "flex items-center gap-2 text-2xl font-bold text-red-100 hover:text-red-400 transition group w-full"
             }
           >
             <FaShoppingBag className="text-red-100 text-xl h-7 w-7 duration-300 transition group-hover:scale-110 group-hover:rotate-12" />
@@ -25,7 +25,7 @@ const NavBar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-400 transition-all duration-300 group-hover:w-full"></span>
             </span>
           </NavLink>
-          <p className="text-[12px] font-semibold text-red-200 animate-pulse">
+          <p className="text-[12px] font-semibold text-red-200 animate-pulse w-full">
             Easy Sell, Easy Buy and Enjoy
           </p>
         </div>

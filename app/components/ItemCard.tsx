@@ -67,13 +67,13 @@ const ItemCard = ({
         )}
 
         <div className="flex justify-between items-center p-4 md:p-4 pt-0 md:pt-0">
-          <h4 className="text-3xl inline font-semibold text-red-500 rounded-lg line-clamp-2 group-hover:text-red-300 transition-colors">
+          <h4 className="text-2xl sm:text-3xl inline font-semibold text-red-500 rounded-lg line-clamp-2 group-hover:text-red-300 transition-colors">
             ${item.price.toLocaleString()}
           </h4>
           <div>
-            <span className="text-[11px] md:text-xs text-gray-300">
+            <h2 className="text-[11px] sm:text-xs text-gray-300 w-full">
               {timeAgo(item.dateTime)}
-            </span>
+            </h2>
           </div>
         </div>
       </div>

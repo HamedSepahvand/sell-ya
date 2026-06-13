@@ -146,10 +146,9 @@ const HousePage = ({ loaderData }: Route.ComponentProps) => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold flex items-center gap-2">
               <FaTshirt /> House
             </h2>
-            <div className="h-1 w-20 bg-red-500 mt-2 rounded-full"></div>
           </div>
 
-          <div className="flex gap-4">
+          <div className=" flex gap-4">
             <input
               placeholder="Search ..."
               onChange={(e) => {
@@ -157,7 +156,7 @@ const HousePage = ({ loaderData }: Route.ComponentProps) => {
                 setCurrentPage(1);
               }}
               type="text"
-              className="cursor-pointer flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+              className="cursor-pointer flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 w-full"
             />
             <button
               onClick={() => setShowFilters(!showFilters)}
