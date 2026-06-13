@@ -74,14 +74,6 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
     return `${diffInYears} year${diffInYears > 1 ? "s" : ""} ago`;
   };
 
-  const getGenderColor = (gender: string) => {
-    return gender === "Boy" || gender === "Male"
-      ? "text-cyan-300"
-      : "text-pink-400";
-  };
-
-  console.log(item);
-
   return (
     <>
       <Link
@@ -90,172 +82,318 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
       >
         <FaArrowLeft className="mr-2" /> Back To Cars
       </Link>
-      <div className="flex justify-between items-center gap-5">
-        <div className="w-3xl ">
-          <h1 className="text-4xl font-bold text-red-100">{item.title}</h1>
-          <div className="text-lg font-semibold text-red-100 border border-pink-950 w-[92%] rounded-lg p-4 mt-6">
-            <div
-              className={`flex flex-col justify-between border-b border-red-900 pb-4`}
-            >
-              <h2 className="text-base">Mileage:</h2>
-              <div className="relative mb-5">
-                <h2 className={`absolute right-1 mt-1 `}>
-                  {item.specificData.mileageKm.toLocaleString()} KM
-                </h2>
-              </div>
-            </div>
-            <div
-              className={`flex flex-col justify-between border-b border-red-900 pb-4`}
-            >
-              <h2 className="text-base">Color:</h2>
-              <div className="relative mb-5">
-                <h2 className={`absolute right-1 mt-1 `}>
-                  {item.specificData.color}
-                </h2>
-              </div>
-            </div>
-            <div
-              className={`flex flex-col justify-between border-b border-red-900 pb-4`}
-            >
-              <h2 className="text-base">Transmission:</h2>
-              <div className="relative mb-5">
-                <h2 className={`absolute right-1 mt-1 `}>
-                  {item.specificData.transmission}
-                </h2>
-              </div>
-            </div>
-            <div
-              className={`flex flex-col justify-between border-b border-red-900 pb-4`}
-            >
-              <h2 className="text-base">Fuel type:</h2>
-              <div className="relative mb-5">
-                <h2 className={`absolute right-1 mt-1 `}>
-                  {item.specificData.fuelType}
-                </h2>
-              </div>
-            </div>
-            <div
-              className={`flex flex-col justify-between border-b border-red-900 pb-4`}
-            >
-              <h2 className="text-base">Engine Capacity:</h2>
-              <div className="relative mb-5">
-                <h2 className={`absolute right-1 mt-1 `}>
-                  {item.specificData.engineCapacity}
-                </h2>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between border-b border-red-900 py-4">
-              <h2 className="text-base">Made year:</h2>
-              <div className="relative mb-5">
-                <h2 className={"absolute right-1"}>{item.specificData.year}</h2>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between border-b border-red-900 py-4">
-              <h2 className="text-base">Chassis Condition:</h2>
-              <div className="relative mb-5">
-                <h2 className={"absolute right-1 mt-1 line-clamp-1 text-xs"}>
-                  {item.specificData.chassisCondition}
-                </h2>
-              </div>
-            </div>
-            <div className="flex flex-col justify-between  py-4">
-              <h2 className="text-base">Body Condition:</h2>
-              <div className="relative mb-5">
-                {" "}
-                <h2 className={"absolute right-1 text-xs"}>
-                  {item.specificData.bodyCondition}
-                </h2>
-              </div>
-            </div>
-          </div>
-
-          <p className="mt-5 text-lg text-cyan-100 w-[92%]">
-            {item.description}
-          </p>
-        </div>
-        <div className="w-3xl flex flex-col">
-          <div className="relative overflow-hidden object-cover rounded-lg w-full h-full group">
-            <img
-              src={`/images/cars-images/${images[currentIndex]}`}
-              alt={`product image ${currentIndex + 1}`}
-              className="w-full h-100 object-cover transition-all duration-300"
-            />
-
-            {images.length > 1 && (
-              <>
-                <button
-                  onClick={goToPrevious}
-                  className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-all opacity-0 group-hover:opacity-100"
-                  aria-label="Previous image"
-                >
-                  ❮
-                </button>
-
-                <button
-                  onClick={goToNext}
-                  className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-all opacity-0 group-hover:opacity-100"
-                  aria-label="Next image"
-                >
-                  ❯
-                </button>
-
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100">
-                  {currentIndex + 1} / {images.length}
+      <div className="container hidden sm:block">
+        <div className="flex justify-between items-center gap-5">
+          <div className="w-3xl ">
+            <h1 className="text-4xl font-bold text-red-100">{item.title}</h1>
+            <div className="text-xl font-semibold text-red-100 border border-pink-950 w-[92%] rounded-lg p-4 mt-6">
+              <div
+                className={`flex flex-col justify-between border-b border-red-900 pb-4`}
+              >
+                <h2 className="text-base">Mileage:</h2>
+                <div className="relative mb-5">
+                  <h2 className={"absolute right-1 mt-1"}>
+                    {item.specificData.mileageKm} KM
+                  </h2>
                 </div>
-              </>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Made year:</h2>
+                <div className="relative mb-5">
+                  <h2 className={"absolute right-1"}>
+                    {item.specificData.year}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Chassis:</h2>
+                <div className="relative mb-5">
+                  <h2
+                    className={"absolute right-1 mt-1 line-clamp-1 text-base"}
+                  >
+                    {item.specificData.chassisCondition}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Body:</h2>
+                <div className="relative mb-5 pb-9">
+                  {" "}
+                  <h2 className={"absolute right-1 line-clapm-2"}>
+                    {item.specificData.bodyCondition}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Color:</h2>
+                <div className="relative mb-5">
+                  {" "}
+                  <h2 className={"absolute right-1 line-clapm-2"}>
+                    {item.specificData.color}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Transmission:</h2>
+                <div className="relative mb-5">
+                  {" "}
+                  <h2 className={"absolute right-1 line-clapm-2"}>
+                    {item.specificData.transmission}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between py-5 border-b border-red-900">
+                <h2 className="text-base ">Fuel type:</h2>
+                <div className="relative mb-4">
+                  {" "}
+                  <h2 className={"absolute text-md right-1"}>
+                    {item.specificData.fuelType}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between py-2">
+                <h2 className="text-base">Engine Capacity:</h2>
+                <div className="relative mb-4">
+                  {" "}
+                  <h2 className={"absolute text-md right-1"}>
+                    {item.specificData.engineCapacity}
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-5 text-lg text-cyan-100 w-[92%]">
+              {item.description}
+            </p>
+          </div>
+          <div className="w-3xl flex flex-col">
+            <div className="relative overflow-hidden object-cover rounded-lg w-full h-full group">
+              <img
+                src={`/images/cars-images/${images[currentIndex]}`}
+                alt={`product image ${currentIndex + 1}`}
+                className="w-full h-full object-cover transition-all duration-300"
+              />
+
+              {images.length > 1 && (
+                <>
+                  <button
+                    onClick={goToPrevious}
+                    className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-all opacity-0 group-hover:opacity-100"
+                    aria-label="Previous image"
+                  >
+                    ❮
+                  </button>
+
+                  <button
+                    onClick={goToNext}
+                    className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-all opacity-0 group-hover:opacity-100"
+                    aria-label="Next image"
+                  >
+                    ❯
+                  </button>
+
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100">
+                    {currentIndex + 1} / {images.length}
+                  </div>
+                </>
+              )}
+            </div>
+            <div className="flex justify-between">
+              <div className="mt-[3%]">
+                <h3 className="text-red-200 mt-[3%]">
+                  {timeAgo(item.dateTime)}
+                </h3>
+                <h3 className="mt-2">
+                  <a href="#" className="no-decoration text-pink-300">
+                    {item.city}
+                  </a>
+                  {"  "}/{"  "}
+                  <a href="#" className="no-decoration  text-pink-400">
+                    {item.neighborhood}
+                  </a>
+                </h3>
+              </div>
+              <div className="flex flex-col items-center gap-2 mt-4">
+                {item.isUrgent && (
+                  <h2 className="mr-8 p-1 bg bg-blue-700 rounded-xl w-15 text-center">
+                    Urgent
+                  </h2>
+                )}
+                {item.isNew && (
+                  <h2 className="mr-8 p-1 bg bg-red-700 rounded-xl w-15 text-center">
+                    New
+                  </h2>
+                )}
+              </div>
+            </div>
+            <h1 className="text-4xl mt-3 text-fuchsia-400">
+              ${item.price.toLocaleString()}
+            </h1>
+          </div>
+        </div>
+        <div className="felx items-center justify-between gap-5">
+          <div className="flex items-center justify-between gap-3 mt-8">
+            {item.showPhone && (
+              <Link
+                to={`tel:${item.contact.phone}`}
+                className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 shadow-md"
+                title={`شماره: ${item.contact.phone}`}
+              >
+                <FaPhone />
+                <span>Call the seller</span>
+              </Link>
+            )}
+
+            {item.showEmail && (
+              <Link
+                to={`mailto:${item.contact.email}`}
+                className="flex-1 flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 shadow-md"
+              >
+                <FaMailBulk />
+                <span>Email the seller</span>
+              </Link>
             )}
           </div>
-          <div className="flex justify-between">
-            <div className="mt-[3%]">
-              <h3 className="text-red-200 mt-[3%]">{timeAgo(item.dateTime)}</h3>
-              <h3 className="mt-2">
-                <a href="#" className="no-decoration text-pink-300">
-                  {item.city}
-                </a>
-                {"  "}/{"  "}
-                <a href="#" className="no-decoration  text-pink-400">
-                  {item.neighborhood}
-                </a>
-              </h3>
-            </div>
-            <div className="flex flex-col items-center gap-2 mt-4">
-              {item.isUrgent && (
-                <h2 className="mr-8 p-1 bg bg-blue-700 rounded-xl w-15 text-center">
-                  Urgent
-                </h2>
-              )}
-              {item.isNew && (
-                <h2 className="mr-8 p-1 bg bg-red-700 rounded-xl w-15 text-center">
-                  New
-                </h2>
-              )}
-            </div>
-          </div>
-          <h1 className="text-4xl mt-3 text-fuchsia-400">
-            ${item.price.toLocaleString()}
-          </h1>
         </div>
       </div>
-      <div className="felx items-center justify-between gap-5">
-        <div className="flex items-center justify-between gap-3 mt-8">
+      <div className="block sm:hidden">
+        <div className=" flex flex-col items-center justify-center relative overflow-hidden object-cover rounded-lg w-full h-full group mb-4">
+          <img
+            src={`/images/cars-images/${images[currentIndex]}`}
+            alt={`product image ${currentIndex + 1}`}
+            className="w-full h-full object-cover transition-all duration-300"
+          />
+
+          {images.length > 1 && (
+            <>
+              <button
+                onClick={goToPrevious}
+                className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-all"
+                aria-label="Previous image"
+              >
+                ❮
+              </button>
+
+              <button
+                onClick={goToNext}
+                className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75 transition-all"
+                aria-label="Next image"
+              >
+                ❯
+              </button>
+
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+                {currentIndex + 1} / {images.length}
+              </div>
+            </>
+          )}
+        </div>
+
+        <h1 className="text-xl font-bold text-red-100 mb-4">{item.title}</h1>
+
+        <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-red-100 border border-pink-950 rounded-lg p-3 mb-4">
+          <div className="border-gray-800 border-b pb-6 relative">
+            <span className="text-xs block ">Millage:</span>
+            <span className="text-red-200 absolute right-1">
+              {item.specificData.mileageKm} KM
+            </span>
+          </div>
+          <div className="border-gray-800 border-b pb-6 relative">
+            <span className="text-xs block">Made year:</span>
+            <span className="text-red-200 absolute right-1">
+              {item.specificData.year}
+            </span>
+          </div>
+          <div className="border-gray-800 border-b pb-13 relative">
+            <span className="text-xs block">Chassis:</span>
+            <span className="text-red-200 absolute right-1 line-clamp-2">
+              {item.specificData.chassisCondition}
+            </span>
+          </div>
+          <div className="border-gray-800 border-b pb-6 relative">
+            <span className="text-xs block">Body:</span>
+            <span className="text-red-200 text-xs  absolute right-1 line-clamp-3">
+              {item.specificData.bodyCondition}
+            </span>
+          </div>
+          <div className="border-gray-800 border-b pb-6 relative">
+            <span className="text-xs block">Color:</span>
+            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
+              {item.specificData.color}
+            </span>
+          </div>
+          <div className="border-gray-800 border-b pb-6 relative">
+            <span className="text-xs block">Transmission:</span>
+            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
+              {item.specificData.transmission}
+            </span>
+          </div>
+          <div className=" pb-5 relative">
+            <span className="text-xs block">Fuel Type:</span>
+            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
+              {item.specificData.fuelType}
+            </span>
+          </div>
+          <div className=" pb-5 relative">
+            <span className="text-xs block">Engine Capacity:</span>
+            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
+              {item.specificData.engineCapacity}
+            </span>
+          </div>
+        </div>
+
+        <p className="text-sm text-cyan-100 mb-4">{item.description}</p>
+
+        <div className="flex justify-between items-center mb-3">
+          <div>
+            <h3 className="text-red-200 text-xs">{timeAgo(item.dateTime)}</h3>
+            <h3 className="text-xs mt-1">
+              <a href="#" className="no-decoration text-pink-300">
+                {item.city}
+              </a>
+              {" / "}
+              <a href="#" className="no-decoration text-pink-400">
+                {item.neighborhood}
+              </a>
+            </h3>
+          </div>
+          <div className="flex gap-2">
+            {item.isUrgent && (
+              <span className="text-xs bg-blue-700 px-2 py-1 rounded-lg">
+                Urgent
+              </span>
+            )}
+            {item.isNew && (
+              <span className="text-xs bg-red-700 px-2 py-1 rounded-lg">
+                New
+              </span>
+            )}
+          </div>
+        </div>
+
+        <h1 className="text-3xl text-fuchsia-400 mb-4">
+          ${item.price.toLocaleString()}
+        </h1>
+
+        <div className="flex gap-3">
           {item.showPhone && (
             <Link
               to={`tel:${item.contact.phone}`}
-              className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 shadow-md"
+              className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 shadow-md text-sm"
               title={`شماره: ${item.contact.phone}`}
             >
               <FaPhone />
-              <span>Call the seller</span>
+              <span>Call</span>
             </Link>
           )}
 
           {item.showEmail && (
             <Link
               to={`mailto:${item.contact.email}`}
-              className="flex-1 flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 shadow-md"
+              className="flex-1 flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-200 shadow-md text-sm"
             >
               <FaMailBulk />
-              <span>Email the seller</span>
+              <span>Email</span>
             </Link>
           )}
         </div>

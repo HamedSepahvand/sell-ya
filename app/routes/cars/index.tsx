@@ -132,7 +132,7 @@ const Cars = ({ loaderData }: Route.ComponentProps) => {
           </div>
 
           {/* Filter Toggle Button */}
-          <div className="flex gap-4">
+          <div className="flex gap-2 items-center justify-center">
             {" "}
             <input
               placeholder="Search ..."
