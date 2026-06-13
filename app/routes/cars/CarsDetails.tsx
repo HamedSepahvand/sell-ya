@@ -231,7 +231,9 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
               )}
             </div>
           </div>
-          <h1 className="text-4xl mt-3 text-fuchsia-400">${item.price}</h1>
+          <h1 className="text-4xl mt-3 text-fuchsia-400">
+            ${item.price.toLocaleString()}
+          </h1>
         </div>
       </div>
       <div className="felx items-center justify-between gap-5">

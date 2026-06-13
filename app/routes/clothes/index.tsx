@@ -375,7 +375,7 @@ const Clothes = ({ loaderData }: Route.ComponentProps) => {
                   transition={{ duration: 0.3 }}
                   layout
                 >
-                  <ItemCard item={item} timeAgo={timeAgo} />
+                  <ItemCard type="clothes" item={item} timeAgo={timeAgo} />
                 </motion.div>
               ))}
             </motion.div>

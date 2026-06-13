@@ -1,11 +1,11 @@
 import type { Route } from "./+types";
 import type { CarProps } from "~/types";
 import { fileContentDB } from "~/api/local";
-import CarCard from "~/components/CarCard";
 import { FaCar, FaFilter, FaTimes } from "react-icons/fa";
 import Pagination from "~/components/Pagination";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ItemCard from "~/components/ItemCard";
 
 export async function loader({ request }: Route.LoaderArgs): Promise<any> {
   const data = JSON.parse(fileContentDB);
@@ -298,7 +298,7 @@ const Cars = ({ loaderData }: Route.ComponentProps) => {
                   transition={{ duration: 0.3 }}
                   layout
                 >
-                  <CarCard item={item} timeAgo={timeAgo} />
+                  <ItemCard type="cars" item={item} timeAgo={timeAgo} />
                 </motion.div>
               ))}
             </motion.div>

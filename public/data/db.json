@@ -694,7 +694,9 @@
           },
           "showPhone": true,
           "showEmail": false,
-          "images": [""],
+          "images": ["house_forSale_001.jpg"],
+          "city": "Los Angeles",
+          "neighborhood": "Beverly Hills",
           "specificData": {
             "listingType": "forSale",
             "areaSqm": 210,
@@ -724,7 +726,9 @@
           },
           "showPhone": true,
           "showEmail": true,
-          "images": [""],
+          "images": ["house_forSale_002.jpg"],
+          "city": "New York",
+          "neighborhood": "Manhattan",
           "specificData": {
             "listingType": "forSale",
             "areaSqm": 95,
@@ -754,7 +758,9 @@
           },
           "showPhone": false,
           "showEmail": true,
-          "images": [""],
+          "images": ["house_forSale_003.jpg"],
+          "city": "Miami",
+          "neighborhood": "Star Island",
           "specificData": {
             "listingType": "forSale",
             "areaSqm": 580,
@@ -784,7 +790,9 @@
           },
           "showPhone": true,
           "showEmail": false,
-          "images": [""],
+          "images": ["house_forSale_004.jpg"],
+          "city": "Chicago",
+          "neighborhood": "Lincoln Park",
           "specificData": {
             "listingType": "forSale",
             "areaSqm": 52,
@@ -814,7 +822,9 @@
           },
           "showPhone": true,
           "showEmail": true,
-          "images": [""],
+          "images": ["house_forSale_005.jpg"],
+          "city": "San Francisco",
+          "neighborhood": "Nob Hill",
           "specificData": {
             "listingType": "forSale",
             "areaSqm": 180,
@@ -844,7 +854,9 @@
           },
           "showPhone": false,
           "showEmail": true,
-          "images": [""],
+          "images": ["house_forSale_006.jpg"],
+          "city": "Boston",
+          "neighborhood": "Beacon Hill",
           "specificData": {
             "listingType": "forSale",
             "areaSqm": 145,
@@ -877,6 +889,8 @@
           "showPhone": true,
           "showEmail": false,
           "images": [""],
+          "city": "Austin",
+          "neighborhood": "Downtown",
           "specificData": {
             "listingType": "forRent",
             "areaSqm": 45,
@@ -907,6 +921,8 @@
           "showPhone": true,
           "showEmail": true,
           "images": [""],
+          "city": "Seattle",
+          "neighborhood": "Queen Anne",
           "specificData": {
             "listingType": "forRent",
             "areaSqm": 175,
@@ -937,6 +953,8 @@
           "showPhone": false,
           "showEmail": true,
           "images": [""],
+          "city": "Las Vegas",
+          "neighborhood": "The Strip",
           "specificData": {
             "listingType": "forRent",
             "areaSqm": 110,
@@ -967,6 +985,8 @@
           "showPhone": true,
           "showEmail": false,
           "images": [""],
+          "city": "Portland",
+          "neighborhood": "Pearl District",
           "specificData": {
             "listingType": "forRent",
             "areaSqm": 18,
@@ -997,6 +1017,8 @@
           "showPhone": true,
           "showEmail": true,
           "images": [""],
+          "city": "San Diego",
+          "neighborhood": "La Jolla",
           "specificData": {
             "listingType": "forRent",
             "areaSqm": 320,
@@ -1027,6 +1049,8 @@
           "showPhone": false,
           "showEmail": true,
           "images": [""],
+          "city": "Denver",
+          "neighborhood": "LoDo",
           "specificData": {
             "listingType": "forRent",
             "areaSqm": 55,
