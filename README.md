@@ -168,23 +168,6 @@ This project was created to:
 
 ---
 
-## 🚧 Future Improvements
-
-- User Authentication
-- JWT Authorization
-- User Profiles
-- Favorites System
-- Messaging System
-- Advanced Filters
-- Image Upload
-- Backend API Integration
-- MongoDB Integration
-- Admin Dashboard
-- Dark/Light Theme
-- Notifications System
-
----
-
 ## 🌟 Performance & Quality
 
 ✅ Responsive Design
