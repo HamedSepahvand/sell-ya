@@ -46,16 +46,6 @@ The application focuses on:
 - Smooth user interactions
 - Scalable project structure
 
-<div align="center">
-
-## 🚀 Live Demo
-
-### 🌐 https://sell-ya.vercel.app
-
-👉 **Try the application live:** [Open SellYa](https://sell-ya.vercel.app/)
-
-</div>
-
 ---
 
 
