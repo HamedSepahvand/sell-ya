@@ -8,8 +8,8 @@ import {
 export default [
   layout("./routes/layouts/HomeLayout.tsx", [
     index("./routes/home/index.tsx"),
-    route("electronics", "./routes/electronics/index.tsx"),
-    route("electronics/:id", "./routes/electronics/MobileDetails.tsx"),
+    route("mobiles", "./routes//mobiles/index.tsx"),
+    route("mobiles/:id", "./routes/mobiles/MobileDetails.tsx"),
     route("cars", "./routes/cars/index.tsx"),
     route("cars/:id", "./routes/cars/CarsDetails.tsx"),
     route("house", "./routes/house/index.tsx"),

@@ -1,8 +1,8 @@
-import type { Route } from "./+types";
+import type { Route } from "../mobiles/+types";
 import type { MobileProps } from "~/types";
 import { readDB } from "~/api/local";
 import ItemCard from "~/components/ItemCard";
-import { FaFilter, FaTimes, FaTshirt } from "react-icons/fa";
+import { FaFilter, FaTimes, FaMobile } from "react-icons/fa";
 import Pagination from "~/components/Pagination";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -12,9 +12,9 @@ export async function loader({ request }: Route.LoaderArgs): Promise<any> {
   return { items: data };
 }
 
-const Electronics = ({ loaderData }: Route.ComponentProps) => {
+const Mobiles = ({ loaderData }: Route.ComponentProps) => {
   const { items } = loaderData;
-  const allElectronics = items.categories.mobile;
+  const allMobiles = items.categories.mobile;
 
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
@@ -27,8 +27,8 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
 
   // Get max price
   const maxPrice = useMemo(
-    () => Math.max(...allElectronics.map((item: MobileProps) => item.price), 0),
-    [allElectronics],
+    () => Math.max(...allMobiles.map((item: MobileProps) => item.price), 0),
+    [allMobiles],
   );
 
   // Filter options based on title keywords
@@ -38,7 +38,8 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
     "Xiaomi",
     "Google",
     "OnePlus",
-    "Huawei",
+    "Asus",
+    "Nothing",
   ];
 
   const storageOptions = [64, 128, 256, 512, 1024];
@@ -66,9 +67,9 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
     return title.includes(search);
   };
 
-  // Filter electronics based on brand, storage, and price
-  const filteredElectronics = useMemo(() => {
-    return allElectronics.filter((item: MobileProps) => {
+  // Filter mobiles based on brand, storage, and price
+  const filteredMobiles = useMemo(() => {
+    return allMobiles.filter((item: MobileProps) => {
       if (!matchesBrand(item)) return false;
 
       if (!matchesStorage(item)) return false;
@@ -84,19 +85,13 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
 
       return true;
     });
-  }, [
-    allElectronics,
-    selectedBrands,
-    selectedStorage,
-    priceRange,
-    searchFilter,
-  ]);
+  }, [allMobiles, selectedBrands, selectedStorage, priceRange, searchFilter]);
 
   // Pagination logic
-  const totalPages = Math.ceil(filteredElectronics.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredMobiles.length / itemsPerPage);
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
-  const currentItems = filteredElectronics.slice(indexOfFirst, indexOfLast);
+  const currentItems = filteredMobiles.slice(indexOfFirst, indexOfLast);
 
   // Clear all filters
   const clearFilters = () => {
@@ -143,7 +138,7 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
         <div className="flex justify-between items-center flex-wrap gap-4">
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold flex items-center gap-2">
-              <FaTshirt /> Electronics
+              <FaMobile /> Mobiles
             </h2>
             <div className="h-1 w-20 bg-red-500 mt-2 rounded-full"></div>
           </div>
@@ -301,13 +296,13 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
                 <p className="text-gray-300">
                   Found{" "}
                   <span className="text-red-500 font-bold">
-                    {filteredElectronics.length}
+                    {filteredMobiles.length}
                   </span>{" "}
                   items
-                  {filteredElectronics.length !== allElectronics.length && (
+                  {filteredMobiles.length !== allMobiles.length && (
                     <span className="text-gray-400">
                       {" "}
-                      (filtered from {allElectronics.length} total)
+                      (filtered from {allMobiles.length} total)
                     </span>
                   )}
                 </p>
@@ -318,7 +313,7 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
       </AnimatePresence>
 
       {/* Items Grid */}
-      {filteredElectronics.length > 0 ? (
+      {filteredMobiles.length > 0 ? (
         <>
           <AnimatePresence mode="wait">
             <motion.div
@@ -337,7 +332,7 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
                   transition={{ duration: 0.3 }}
                   layout
                 >
-                  <ItemCard type="electronics" item={item} timeAgo={timeAgo} />
+                  <ItemCard type="mobiles" item={item} timeAgo={timeAgo} />
                 </motion.div>
               ))}
             </motion.div>
@@ -359,7 +354,7 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
           animate={{ opacity: 1 }}
           className="text-center py-12"
         >
-          <FaTshirt className="text-6xl text-gray-600 mx-auto mb-4" />
+          <FaMobile className="text-6xl text-gray-600 mx-auto mb-4" />
           <p className="text-gray-400 text-lg">
             No items found matching your filters
           </p>
@@ -375,4 +370,4 @@ const Electronics = ({ loaderData }: Route.ComponentProps) => {
   );
 };
 
-export default Electronics;
+export default Mobiles;

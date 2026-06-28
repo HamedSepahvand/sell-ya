@@ -70,7 +70,7 @@ const ItemCard = ({
 
         {item.specificData.storageGB && (
           <h3 className="text-lg font-semibold text-yellow-700  line-clamp-2 group-hover:text-orange-500 transition-colors pl-5">
-            Electronics - {item.specificData.brand}
+            mobiles - {item.specificData.brand}
           </h3>
         )}
 
