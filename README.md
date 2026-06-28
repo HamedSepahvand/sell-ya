@@ -215,9 +215,9 @@ Feel free to fork this repository and submit a pull request.
 
 ## 👨‍💻 Author
 
-**Hamed Sepi**
+**Hamed Sepahvand**
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/HamedSepahvand
 
 ---
 
