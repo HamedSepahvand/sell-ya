@@ -1,30 +1,47 @@
 import type { Route } from "./+types";
-import type { CarProps } from "~/types";
+import type { HouseProps } from "~/types";
 import { Link } from "react-router";
 import { readDB } from "~/api/local";
 import { FaArrowLeft, FaMailBulk, FaPhone } from "react-icons/fa";
 import { useState } from "react";
 
-export async function loader({ request, params }: Route.LoaderArgs) {
-  const { id }: any = params;
+export async function loader({ params }: Route.LoaderArgs) {
+  const { id } = params;
 
   const data = await readDB();
 
-  const items = data.categories.cars;
+  // ترکیب خانه‌های فروش و اجاره
+  const allHouses: HouseProps[] = [
+    ...data.categories.house.forSale,
+    ...data.categories.house.forRent,
+  ];
 
-  const item = items.filter((item: CarProps) => item.id === id);
-  console.log(item);
+  // پیدا کردن آیتم مورد نظر
+  const item = allHouses.find((house: HouseProps) => house.id === id);
 
   return { item };
 }
 
-const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
+const HouseDetails = ({ loaderData }: Route.ComponentProps) => {
+  const item = loaderData.item;
+
+  // اگر آیتم پیدا نشد
+  if (!item) {
+    return (
+      <div className="container text-center py-20">
+        <h1 className="text-3xl text-red-400">House not found</h1>
+
+        <Link
+          to="/house"
+          className="inline-block mt-6 text-blue-400 hover:text-blue-300"
+        >
+          Back to Houses
+        </Link>
+      </div>
+    );
+  }
+
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const data = { loaderData };
-  const item = data.loaderData.item[0];
-  console.log(item);
-
   const images = item.images;
 
   const goToPrevious = () => {
@@ -39,6 +56,12 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
     );
   };
 
+  // اگر هیچ عکسی نبود
+  if (!images || images.length === 0) {
+    return null;
+  }
+
+  // اگر عکسی وجود نداشته باشه
   if (!images || images.length === 0) return null;
 
   const timeAgo = (date: string) => {
@@ -74,15 +97,22 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
     return `${diffInYears} year${diffInYears > 1 ? "s" : ""} ago`;
   };
 
+  const getListingType = (type: string) => {
+    return type === "forSale" ? "For sale" : "For rent";
+  };
+  const getYesOrNo = (type: boolean) => {
+    return type === true ? "Yes" : "No";
+  };
+
   return (
     <>
-      <Link
-        to={"/cars"}
-        className="flex items-center text-red-400 hover:text-blue-500 mb-6 transition"
-      >
-        <FaArrowLeft className="mr-2" /> Back To Cars
-      </Link>
       <div className="container hidden sm:block">
+        <Link
+          to={"/house"}
+          className="flex items-center text-red-400 hover:text-blue-500 mb-6 transition"
+        >
+          <FaArrowLeft className="mr-2" /> Back To Houses
+        </Link>
         <div className="flex justify-between items-center gap-5">
           <div className="w-3xl ">
             <h1 className="text-4xl font-bold text-red-100">{item.title}</h1>
@@ -90,73 +120,104 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
               <div
                 className={`flex flex-col justify-between border-b border-red-900 pb-4`}
               >
-                <h2 className="text-base">Mileage:</h2>
+                <h2 className="text-base">Type:</h2>
                 <div className="relative mb-5">
-                  <h2 className={"absolute right-1 mt-1"}>
-                    {item.specificData.mileageKm} KM
+                  <h2 className={`absolute right-1 mt-1`}>
+                    {getListingType(item.specificData.listingType)}
                   </h2>
                 </div>
               </div>
               <div className="flex flex-col justify-between border-b border-red-900 py-4">
-                <h2 className="text-base">Made year:</h2>
+                <h2 className="text-base">Area:</h2>
                 <div className="relative mb-5">
                   <h2 className={"absolute right-1"}>
-                    {item.specificData.year}
+                    {item.specificData.areaSqm}
                   </h2>
                 </div>
               </div>
-              <div className="flex flex-col justify-between border-b border-red-900 py-4">
-                <h2 className="text-base">Chassis:</h2>
-                <div className="relative mb-5">
-                  <h2
-                    className={"absolute right-1 mt-1 line-clamp-1 text-base"}
-                  >
-                    {item.specificData.chassisCondition}
-                  </h2>
+              {item.specificData.monthlyRent && (
+                <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                  <h2 className="text-base">Monthly rent:</h2>
+                  <div className="relative mb-5">
+                    <h2
+                      className={"absolute right-1 mt-1 line-clamp-1 text-base"}
+                    >
+                      ${Number(item.specificData.monthlyRent).toLocaleString()}
+                    </h2>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col justify-between border-b border-red-900 py-4">
-                <h2 className="text-base">Body:</h2>
-                <div className="relative mb-5 pb-9">
-                  {" "}
-                  <h2 className={"absolute right-1 line-clapm-2"}>
-                    {item.specificData.bodyCondition}
-                  </h2>
+              )}
+              {item.specificData.pricePerSqm && (
+                <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                  <h2 className="text-base">Price per Sqm:</h2>
+                  <div className="relative mb-5">
+                    <h2
+                      className={"absolute right-1 mt-1 line-clamp-1 text-base"}
+                    >
+                      ${Number(item.specificData.pricePerSqm).toLocaleString()}
+                    </h2>
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="flex flex-col justify-between border-b border-red-900 py-4">
-                <h2 className="text-base">Color:</h2>
-                <div className="relative mb-5">
-                  {" "}
-                  <h2 className={"absolute right-1 line-clapm-2"}>
-                    {item.specificData.color}
-                  </h2>
-                </div>
-              </div>
-              <div className="flex flex-col justify-between border-b border-red-900 py-4">
-                <h2 className="text-base">Transmission:</h2>
+                <h2 className="text-base">Year built:</h2>
                 <div className="relative mb-5">
                   {" "}
-                  <h2 className={"absolute right-1 line-clapm-2"}>
-                    {item.specificData.transmission}
+                  <h2 className={"absolute right-1 "}>
+                    {item.specificData.yearBuilt}
                   </h2>
                 </div>
               </div>
-              <div className="flex flex-col justify-between py-5 border-b border-red-900">
-                <h2 className="text-base ">Fuel type:</h2>
-                <div className="relative mb-4">
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Bedrooms:</h2>
+                <div className="relative mb-5">
                   {" "}
-                  <h2 className={"absolute text-md right-1"}>
-                    {item.specificData.fuelType}
+                  <h2 className={"absolute right-1 "}>
+                    {item.specificData.bedrooms}
                   </h2>
                 </div>
               </div>
-              <div className="flex flex-col justify-between py-2">
-                <h2 className="text-base">Engine Capacity:</h2>
-                <div className="relative mb-4">
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Bathrooms:</h2>
+                <div className="relative mb-5">
                   {" "}
-                  <h2 className={"absolute text-md right-1"}>
-                    {item.specificData.engineCapacity}
+                  <h2 className={"absolute right-1 "}>
+                    {item.specificData.bathrooms}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Total floors:</h2>
+                <div className="relative mb-5">
+                  {" "}
+                  <h2 className={"absolute right-1 "}>
+                    {item.specificData.totalFloors}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Floor number:</h2>
+                <div className="relative mb-5">
+                  {" "}
+                  <h2 className={"absolute right-1 "}>
+                    {item.specificData.floorNumber}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-b border-red-900 py-4">
+                <h2 className="text-base">Parking:</h2>
+                <div className="relative mb-5">
+                  {" "}
+                  <h2 className={"absolute right-1 "}>
+                    {getYesOrNo(item.specificData.hasParking)}
+                  </h2>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between border-red-900 pt-4">
+                <h2 className="text-base">Elevator:</h2>
+                <div className="relative mb-5">
+                  <h2 className={"absolute right-1 "}>
+                    {getYesOrNo(item.specificData.hasElevator)}
                   </h2>
                 </div>
               </div>
@@ -169,9 +230,9 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
           <div className="w-3xl flex flex-col">
             <div className="relative overflow-hidden object-cover rounded-lg w-full h-full group">
               <img
-                src={`/images/cars-images/${images[currentIndex]}`}
+                src={`/images/house-images/${images[currentIndex]}`}
                 alt={`product image ${currentIndex + 1}`}
-                className="w-full h-full object-cover transition-all duration-300"
+                className="w-full h-100 object-cover transition-all duration-300"
               />
 
               {images.length > 1 && (
@@ -227,7 +288,7 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
               </div>
             </div>
             <h1 className="text-4xl mt-3 text-fuchsia-400">
-              ${item.price.toLocaleString()}
+              ${Number(item.price).toLocaleString()}
             </h1>
           </div>
         </div>
@@ -257,11 +318,11 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
         </div>
       </div>
       <div className="block sm:hidden">
-        <div className=" flex flex-col items-center justify-center relative overflow-hidden object-cover rounded-lg w-full h-full group mb-4">
+        <div className=" flex flex-col items-center justify-center relative overflow-hidden object-cover rounded-lg w-full group mb-4">
           <img
-            src={`/images/cars-images/${images[currentIndex]}`}
+            src={`/images/house-images/${images[currentIndex]}`}
             alt={`product image ${currentIndex + 1}`}
-            className="w-full h-full object-cover transition-all duration-300"
+            className="w-full h-80 object-cover transition-all duration-300"
           />
 
           {images.length > 1 && (
@@ -291,55 +352,62 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
 
         <h1 className="text-xl font-bold text-red-100 mb-4">{item.title}</h1>
 
-        <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-red-100 border border-pink-950 rounded-lg p-3 mb-4">
-          <div className="border-gray-800 border-b pb-6 relative">
-            <span className="text-xs block ">Millage:</span>
-            <span className="text-red-200 absolute right-1">
-              {item.specificData.mileageKm} KM
+        <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-red-100 border border-pink-950 rounded-lg p-3 mb-4 divide-x">
+          <div className=" flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Type:</span>
+            <span>{getListingType(item.specificData.listingType)}</span>
+          </div>
+          <div className=" flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Area:</span>
+            <span>
+              {item.specificData.areaSqm} m<sup>2</sup>
             </span>
           </div>
-          <div className="border-gray-800 border-b pb-6 relative">
-            <span className="text-xs block">Made year:</span>
-            <span className="text-red-200 absolute right-1">
-              {item.specificData.year}
-            </span>
+          {item.specificData.pricePerSqm && (
+            <div className=" flex justify-between border-gray-800 border-b pb-3 pr-2">
+              <span className="text-xs block">Price per Sqm:</span>
+              <span className="">
+                ${Number(item.specificData.pricePerSqm).toLocaleString()}
+              </span>
+            </div>
+          )}
+          {item.specificData.monthlyRent && (
+            <div className=" flex justify-between border-gray-800 border-b pb-3 pr-2">
+              <span className="text-xs block">Monthly rent:</span>
+              <span className="">
+                ${Number(item.specificData.monthlyRent).toLocaleString()}
+              </span>
+            </div>
+          )}
+          <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Year built:</span>
+            <span>{item.specificData.yearBuilt}</span>
           </div>
-          <div className="border-gray-800 border-b pb-13 relative">
-            <span className="text-xs block">Chassis:</span>
-            <span className="text-red-200 absolute right-1 line-clamp-2">
-              {item.specificData.chassisCondition}
-            </span>
+          <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Bedrooms:</span>
+            <span>{item.specificData.bedrooms}</span>
           </div>
-          <div className="border-gray-800 border-b pb-6 relative">
-            <span className="text-xs block">Body:</span>
-            <span className="text-red-200 text-xs  absolute right-1 line-clamp-3">
-              {item.specificData.bodyCondition}
-            </span>
+          <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Bathrooms:</span>
+            <span>{item.specificData.bathrooms}</span>
           </div>
-          <div className="border-gray-800 border-b pb-6 relative">
-            <span className="text-xs block">Color:</span>
-            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
-              {item.specificData.color}
-            </span>
+          <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Total floors:</span>
+            <span>{item.specificData.totalFloors}</span>
           </div>
-          <div className="border-gray-800 border-b pb-6 relative">
-            <span className="text-xs block">Transmission:</span>
-            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
-              {item.specificData.transmission}
-            </span>
+          <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
+            <span className="text-xs block">Floor number:</span>
+            <span>{item.specificData.floorNumber}</span>
           </div>
-          <div className=" pb-5 relative">
-            <span className="text-xs block">Fuel Type:</span>
-            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
-              {item.specificData.fuelType}
-            </span>
+          <div className="flex justify-between border-gray-800 pr-2">
+            <span className="text-xs block">Parking:</span>
+            <span>{getYesOrNo(item.specificData.hasParking)}</span>
           </div>
-          <div className=" pb-5 relative">
-            <span className="text-xs block">Engine Capacity:</span>
-            <span className="text-red-200 text-xs  absolute right-1 line-clamp-1">
-              {item.specificData.engineCapacity}
-            </span>
+          <div className="flex justify-between border-gray-800 pr-2">
+            <span className="text-xs block">Elevator:</span>
+            <span>{getYesOrNo(item.specificData.hasElevator)}</span>
           </div>
+          <span className="w-0 h-0 p-0 m-0 absolute"></span>
         </div>
 
         <p className="text-sm text-cyan-100 mb-4">{item.description}</p>
@@ -372,7 +440,7 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
         </div>
 
         <h1 className="text-3xl text-fuchsia-400 mb-4">
-          ${item.price.toLocaleString()}
+          ${Number(item.price).toLocaleString()}
         </h1>
 
         <div className="flex gap-3">
@@ -402,4 +470,4 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
   );
 };
 
-export default CarsDetails;
+export default HouseDetails;

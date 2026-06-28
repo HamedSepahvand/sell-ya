@@ -9,10 +9,12 @@ export default [
   layout("./routes/layouts/HomeLayout.tsx", [
     index("./routes/home/index.tsx"),
     route("electronics", "./routes/electronics/index.tsx"),
+    route("electronics/:id", "./routes/electronics/MobileDetails.tsx"),
     route("cars", "./routes/cars/index.tsx"),
+    route("cars/:id", "./routes/cars/CarsDetails.tsx"),
     route("house", "./routes/house/index.tsx"),
+    route("house/:id", "./routes/house/HouseDetails.tsx"),
     route("clothes", "./routes/clothes/index.tsx"),
     route("clothes/:id", "./routes/clothes/ClothesDetails.tsx"),
-    route("cars/:id", "./routes/cars/CarsDetails.tsx"),
   ]),
 ] satisfies RouteConfig;

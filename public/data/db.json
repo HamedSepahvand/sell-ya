@@ -1522,7 +1522,7 @@
       },
       "showPhone": true,
       "showEmail": false,
-      "images": [""],
+      "images": ["mobile_001.jpg"],
       "specificData": {
         "brand": "Samsung",
         "storageGB": 512,
@@ -1548,7 +1548,7 @@
       },
       "showPhone": true,
       "showEmail": true,
-      "images": [""],
+      "images": ["mobile_001.jpg"],
       "specificData": {
         "brand": "Apple",
         "storageGB": 256,

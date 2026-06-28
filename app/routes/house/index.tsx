@@ -1,14 +1,14 @@
 import type { Route } from "./+types";
 import type { HouseProps } from "~/types";
-import { fileContentDB } from "~/api/local";
+import { readDB } from "~/api/local";
 import ItemCard from "~/components/ItemCard";
-import { FaFilter, FaTimes, FaTshirt } from "react-icons/fa";
+import { FaFilter, FaTimes, FaWarehouse } from "react-icons/fa";
 import Pagination from "~/components/Pagination";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export async function loader({ request }: Route.LoaderArgs): Promise<any> {
-  const data = JSON.parse(fileContentDB);
+  const data = await readDB();
   return { items: data };
 }
 
@@ -17,8 +17,8 @@ const HousePage = ({ loaderData }: Route.ComponentProps) => {
   const forSale = items.categories.house.forSale;
   const forRent = items.categories.house.forRent;
   const allHouses: HouseProps[] = [
-    ...Object.values(forSale),
-    ...Object.values(forRent),
+    ...(Object.values(forSale) as HouseProps[]),
+    ...(Object.values(forRent) as HouseProps[]),
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -144,11 +144,13 @@ const HousePage = ({ loaderData }: Route.ComponentProps) => {
         <div className="flex justify-between items-center flex-wrap gap-4">
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold flex items-center gap-2">
-              <FaTshirt /> House
+              <FaWarehouse /> House
             </h2>
+            <div className="h-1 w-20 bg-red-500 mt-2 rounded-full"></div>
           </div>
 
-          <div className=" flex gap-4">
+          <div className="flex gap-2">
+            {" "}
             <input
               placeholder="Search ..."
               onChange={(e) => {
@@ -156,23 +158,14 @@ const HousePage = ({ loaderData }: Route.ComponentProps) => {
                 setCurrentPage(1);
               }}
               type="text"
-              className="cursor-pointer flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 w-full"
+              className="w-full cursor-pointer flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
             />
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="cursor-pointer flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer w-full"
             >
               <FaFilter />
               {showFilters ? "Hide Filters" : "Show Filters"}
-              {hasActiveFilters && (
-                <span className="ml-1 bg-yellow-500 text-black text-xs rounded-full px-2 py-0.5">
-                  {selectedFor.length +
-                    (priceRange.min !== "" || priceRange.max !== "" ? 1 : 0) +
-                    (meterageRange.min !== "" || meterageRange.max !== ""
-                      ? 1
-                      : 0)}
-                </span>
-              )}
             </button>
           </div>
         </div>
@@ -369,7 +362,7 @@ const HousePage = ({ loaderData }: Route.ComponentProps) => {
           animate={{ opacity: 1 }}
           className="text-center py-12"
         >
-          <FaTshirt className="text-6xl text-gray-600 mx-auto mb-4" />
+          <FaWarehouse className="text-6xl text-gray-600 mx-auto mb-4" />
           <p className="text-gray-400 text-lg">
             No items found matching your filters
           </p>

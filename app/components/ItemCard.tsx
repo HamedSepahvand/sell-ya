@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import type { ClotheProps, CarProps } from "~/types";
+import type { ItemProps } from "~/types";
 
 const ItemCard = ({
   item,
@@ -7,13 +7,21 @@ const ItemCard = ({
   type,
 }: {
   timeAgo: (date: string) => string;
+  item: ItemProps;
+  type: string;
 }) => {
   const listingType =
     item.specificData.areaSqm && item.specificData.listingType === "forSale"
       ? "For Sale"
       : "For Rent";
+
+  console.log(item);
+
   return (
     <Link
+      onClick={() => {
+        console.log(item);
+      }}
       key={item.id}
       to={`/${type}/${item.id}`}
       className="group block transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"

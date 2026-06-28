@@ -1,14 +1,14 @@
 import type { Route } from "./+types";
 import type { ClotheProps } from "~/types";
 import { Link } from "react-router";
-import { fileContentDB } from "~/api/local";
+import { readDB } from "~/api/local";
 import { FaArrowLeft, FaMailBulk, FaPhone } from "react-icons/fa";
 import { useState } from "react";
 
 export async function loader({ request, params }: Route.LoaderArgs) {
   const { id }: any = params;
 
-  const data = JSON.parse(fileContentDB);
+  const data = await readDB();
 
   const items = data.categories.clothes;
 

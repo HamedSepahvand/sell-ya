@@ -1,6 +1,6 @@
 import type { Route } from "./+types";
 import type { CarProps } from "~/types";
-import { fileContentDB } from "~/api/local";
+import { readDB } from "~/api/local";
 import { FaCar, FaFilter, FaTimes } from "react-icons/fa";
 import Pagination from "~/components/Pagination";
 import { useState, useMemo } from "react";
@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ItemCard from "~/components/ItemCard";
 
 export async function loader({ request }: Route.LoaderArgs): Promise<any> {
-  const data = JSON.parse(fileContentDB);
+  const data = await readDB();
   return { items: data };
 }
 
@@ -132,7 +132,7 @@ const Cars = ({ loaderData }: Route.ComponentProps) => {
           </div>
 
           {/* Filter Toggle Button */}
-          <div className="flex gap-2 items-center justify-center">
+          <div className="flex gap-2">
             {" "}
             <input
               placeholder="Search ..."

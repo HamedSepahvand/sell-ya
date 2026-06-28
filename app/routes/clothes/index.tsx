@@ -1,6 +1,6 @@
 import type { Route } from "./+types";
 import type { ClotheProps } from "~/types";
-import { fileContentDB } from "~/api/local";
+import { readDB } from "~/api/local";
 import ItemCard from "~/components/ItemCard";
 import { FaFilter, FaTimes, FaTshirt } from "react-icons/fa";
 import Pagination from "~/components/Pagination";
@@ -8,7 +8,7 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export async function loader({ request }: Route.LoaderArgs): Promise<any> {
-  const data = JSON.parse(fileContentDB);
+  const data = await readDB();
   return { items: data };
 }
 
@@ -178,7 +178,7 @@ const Clothes = ({ loaderData }: Route.ComponentProps) => {
           </div>
 
           {/* Filter Toggle Button and Search Input */}
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             {" "}
             <input
               placeholder="Search ..."
@@ -187,21 +187,14 @@ const Clothes = ({ loaderData }: Route.ComponentProps) => {
                 setCurrentPage(1);
               }}
               type="text"
-              className="cursor-pointer flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 w-full"
+              className="w-full cursor-pointer flex items-center gap-2 bg-red-800 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
             />
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="cursor-pointer flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300"
+              className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer w-full"
             >
               <FaFilter />
               {showFilters ? "Hide Filters" : "Show Filters"}
-              {hasActiveFilters && (
-                <span className="ml-1 bg-yellow-500 text-black text-xs rounded-full px-2 py-0.5">
-                  {selectedGenders.length +
-                    selectedAgeGroups.length +
-                    (priceRange.min !== "" || priceRange.max !== "" ? 1 : 0)}
-                </span>
-              )}
             </button>
           </div>
         </div>
