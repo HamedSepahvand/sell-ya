@@ -6,7 +6,7 @@ import { FaArrowLeft, FaMailBulk, FaPhone } from "react-icons/fa";
 import { useState } from "react";
 
 export async function loader({ params }: Route.LoaderArgs) {
-  const { id } = params;
+  const { id }: any = params;
 
   const data = await readDB();
 

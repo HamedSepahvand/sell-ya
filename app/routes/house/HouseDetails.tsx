@@ -5,8 +5,8 @@ import { readDB } from "~/api/local";
 import { FaArrowLeft, FaMailBulk, FaPhone } from "react-icons/fa";
 import { useState } from "react";
 
-export async function loader({ params }: Route.LoaderArgs) {
-  const { id } = params;
+export async function loader({ request, params }: Route.LoaderArgs) {
+  const { id }: any = params;
 
   const data = await readDB();
 
