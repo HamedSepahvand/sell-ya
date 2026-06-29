@@ -24,13 +24,6 @@ const MobileDetails = ({ loaderData }: Route.ComponentProps) => {
     return (
       <div className="container text-center py-20">
         <h1 className="text-3xl text-red-400">Mobile not found</h1>
-
-        <Link
-          to="/mobiles"
-          className="inline-block mt-6 text-blue-400 hover:text-blue-300"
-        >
-          Back to mobiles
-        </Link>
       </div>
     );
   }
@@ -87,13 +80,6 @@ const MobileDetails = ({ loaderData }: Route.ComponentProps) => {
 
     const diffInYears = Math.floor(diffInMonths / 12);
     return `${diffInYears} year${diffInYears > 1 ? "s" : ""} ago`;
-  };
-
-  const getListingType = (type: string) => {
-    return type === "forSale" ? "For sale" : "For rent";
-  };
-  const getYesOrNo = (type: boolean) => {
-    return type === true ? "Yes" : "No";
   };
 
   return (

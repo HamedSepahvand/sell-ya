@@ -1,4 +1,4 @@
-import type { Route } from "../mobiles/+types";
+import type { Route } from "./+types";
 import type { MobileProps } from "~/types";
 import { readDB } from "~/api/local";
 import ItemCard from "~/components/ItemCard";

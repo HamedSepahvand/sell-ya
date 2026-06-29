@@ -43,7 +43,7 @@ const NavBar = () => {
               className={({ isActive }) => (isActive ? active : base)}
               to="/mobiles"
             >
-              mobiles
+              Mobiles
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? active : base)}
@@ -92,7 +92,7 @@ const NavBar = () => {
               className={({ isActive }) => (isActive ? active : base)}
               to="/mobiles"
             >
-              mobiles
+              Mobiles
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? active : base)}

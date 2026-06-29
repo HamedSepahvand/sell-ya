@@ -76,13 +76,13 @@ const CarsDetails = ({ loaderData }: Route.ComponentProps) => {
 
   return (
     <>
-      <Link
-        to={"/cars"}
-        className="flex items-center text-red-400 hover:text-blue-500 mb-6 transition"
-      >
-        <FaArrowLeft className="mr-2" /> Back To Cars
-      </Link>
       <div className="container hidden sm:block">
+        <Link
+          to={"/cars"}
+          className="flex items-center text-red-400 hover:text-blue-500 mb-6 transition"
+        >
+          <FaArrowLeft className="mr-2" /> Back To Cars
+        </Link>
         <div className="flex justify-between items-center gap-5">
           <div className="w-3xl ">
             <h1 className="text-4xl font-bold text-red-100">{item.title}</h1>
