@@ -119,7 +119,7 @@ const MobileDetails = ({ loaderData }: Route.ComponentProps) => {
                 <div className="relative mb-5">
                   {" "}
                   <h2 className={"absolute right-1 "}>
-                    {item.specificData.ramGB}
+                    {item.specificData.ramGB} GB
                   </h2>
                 </div>
               </div>
@@ -288,13 +288,11 @@ const MobileDetails = ({ loaderData }: Route.ComponentProps) => {
           </div>
           <div className=" flex justify-between border-gray-800 border-b pb-3 pr-2">
             <span className="text-xs block">Storage:</span>
-            <span>
-              {item.specificData.storageGB} m<sup>2</sup>
-            </span>
+            <span>{item.specificData.storageGB} GB</span>
           </div>
           <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
             <span className="text-xs block">Ram:</span>
-            <span>{item.specificData.ramGB}</span>
+            <span>{item.specificData.ramGB} GB</span>
           </div>
           <div className="flex justify-between border-gray-800 border-b pb-3 pr-2">
             <span className="text-xs block">Color:</span>
